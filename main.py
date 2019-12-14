@@ -12,6 +12,7 @@ class App(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
         super(App, self).__init__(parent)
         self.setupUi(self)
         self.__json_path = pathlib.Path.cwd() / "config.json"
+        self.__mod_config_path = pathlib.Path(self.rootPath.text())/"data/mods.cfg"
 
         if self.__json_path.exists():
             with open('config.json') as json_file:
@@ -49,9 +50,7 @@ class App(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
             if lw.item(x).checkState() != QtCore.Qt.Unchecked:
                 mod_list.append(lw.item(x).text() + "\n")
 
-        path = pathlib.Path(self.rootPath.text())/"data/mods.cfg"
-
-        with open(path, 'w') as file:
+        with open(self.__mod_config_path, 'w') as file:
             file.writelines(mod_list)
 
         self.show_message("Config saved.", "Saved!")
