@@ -1,7 +1,6 @@
 import unittest
 from sample.core import ModsController
 from pathlib import Path
-import json
 
 collector = ModsController("C:/Casual/Steam/steamapps/common/Kenshi/")
 

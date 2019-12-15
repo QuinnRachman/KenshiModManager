@@ -18,7 +18,7 @@ class ModsController:
         if self.__validate_path(self.__rootstring):
             kenshi_exe = Path(self.__rootstring + "/kenshi_x64.exe")
             if kenshi_exe.exists():
-                mods_path = Path(self.__rootstring)/"mods"
+                mods_path = Path(self.__rootstring) / "mods"
                 return mods_path
         else:
             return ""

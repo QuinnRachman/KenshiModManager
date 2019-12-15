@@ -204,6 +204,44 @@
      <string>Save paths</string>
     </property>
    </widget>
+   <widget class="QLabel" name="steamLabel">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>219</y>
+      <width>391</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Steam Path&lt;br/&gt;&lt;/span&gt;&lt;br/&gt;Path to where your steam folder is located. This is for the play function of the mod manager.&lt;/p&gt;&lt;p&gt;(If you rather open the game via steam itself you can leave this empty)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="steamPath">
+    <property name="geometry">
+     <rect>
+      <x>455</x>
+      <y>300</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
