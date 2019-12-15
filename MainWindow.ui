@@ -112,7 +112,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Save Config</string>
+     <string>Save load order</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="rootPath">
@@ -129,7 +129,7 @@
     <property name="geometry">
      <rect>
       <x>455</x>
-      <y>180</y>
+      <y>200</y>
       <width>400</width>
       <height>20</height>
      </rect>
@@ -169,7 +169,7 @@
       <x>460</x>
       <y>99</y>
       <width>391</width>
-      <height>81</height>
+      <height>100</height>
      </rect>
     </property>
     <property name="contextMenuPolicy">
@@ -179,7 +179,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Workshop Path&lt;br/&gt;&lt;/span&gt;&lt;br/&gt;Put the folder where your kenshi workshop mods are located, usually it's in:&lt;/p&gt;&lt;p&gt;&amp;lt;WhereSteamIs&amp;gt;/steamapps/workshop/content/233860 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Workshop Path&lt;br/&gt;&lt;/span&gt;&lt;br/&gt;Put the folder where your kenshi workshop mods are located, usually it's in:&lt;/p&gt;&lt;p&gt;If you don't use steam for kenshi you can leave this empty.&lt;/p&gt;&lt;p&gt;&amp;lt;WhereSteamIs&amp;gt;/steamapps/workshop/content/233860&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -210,7 +210,7 @@
       <x>460</x>
       <y>219</y>
       <width>391</width>
-      <height>81</height>
+      <height>97</height>
      </rect>
     </property>
     <property name="contextMenuPolicy">
@@ -220,7 +220,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Steam Path&lt;br/&gt;&lt;/span&gt;&lt;br/&gt;Path to where your steam folder is located. This is for the play function of the mod manager.&lt;/p&gt;&lt;p&gt;(If you rather open the game via steam itself you can leave this empty)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Steam Path&lt;br/&gt;&lt;/span&gt;&lt;br/&gt;Path to where your steam folder is located. &lt;/p&gt;&lt;p&gt;This is for the play function of the mod manager.&lt;/p&gt;&lt;p&gt;(If you rather open the game via steam itself you can leave this empty)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -236,10 +236,49 @@
     <property name="geometry">
      <rect>
       <x>455</x>
-      <y>300</y>
+      <y>320</y>
       <width>400</width>
       <height>20</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectRootPath">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>69</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectWorkshopPath">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>200</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectSteamPath">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>320</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
     </property>
    </widget>
   </widget>

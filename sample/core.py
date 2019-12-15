@@ -50,12 +50,13 @@ class ModsController:
         arr: Array to store the mods
         """
         if path != "":
-            mods = path.iterdir()
-            for mod in mods:
-                if not mod.suffix:
-                    for file in mod.iterdir():
-                        if file.suffix == ".mod":
-                            arr.append(file.name)
+            if path is not None:
+                mods = path.iterdir()
+                for mod in mods:
+                    if not mod.suffix:
+                        for file in mod.iterdir():
+                            if file.suffix == ".mod":
+                                arr.append(file.name)
 
     def get_mods(self):
         mods_list = []

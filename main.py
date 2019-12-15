@@ -26,6 +26,21 @@ class App(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
         self.pathButton.clicked.connect(self.slot_save_paths)
         self.configButton.clicked.connect(self.save_config)
         self.playButton.clicked.connect(self.start_kenshi)
+        self.selectRootPath.clicked.connect(self.find_directory)
+        self.selectWorkshopPath.clicked.connect(self.find_directory)
+        self.selectSteamPath.clicked.connect(self.find_directory)
+
+    def find_directory(self):
+        directory = QtWidgets.QFileDialog().getExistingDirectory(self, "Choose a folder")
+        sender = self.sender().objectName()
+        if sender == "selectRootPath":
+            self.rootPath.setText(str(Path(directory)))
+        elif sender == "selectWorkshopPath":
+            self.workshopPath.setText(str(Path(directory)))
+        elif sender == "selectSteamPath":
+            self.steamPath.setText(str(Path(directory)))
+        else:
+            pass
 
     def show_message(self, message, title):
         error_dialogue = QtWidgets.QMessageBox()
@@ -97,6 +112,7 @@ class App(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
         if self.pathify(self.rootPath) == "":
             self.show_message("ERROR: Root path is required!", "ERROR")
         else:
+            print(self.pathify(self.workshopPath))
             paths_data = {'rootPath': self.pathify(self.rootPath),
                           'workshopPath': self.pathify(self.workshopPath),
                           'steamPath': self.pathify(self.steamPath)}
